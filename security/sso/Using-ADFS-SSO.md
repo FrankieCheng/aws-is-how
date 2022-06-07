@@ -82,6 +82,12 @@ We can refer to the following documents to deploy ADFS services: https://technet
 
   - Configure the federation service on the server.
   
+  On the Server Manager Dashboard page, click the Notifications flag, and then click Configure the federation service on the server.
+
+  The Active Directory Federation Service Configuration Wizard opens.
+
+  On the Welcome page, select Create the first federation server in a federation server farm, and then click Next.
+
   The Active Directory Federation Service Configuration Wizard opens.
 
   - Select `Create the first federation server in a federation server farm`, and then click Next.
