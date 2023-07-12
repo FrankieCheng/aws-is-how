@@ -1,7 +1,7 @@
 # VPC Cross account connection
 
 Here we only discuss using VPC technology to do cross account connection. Using Direct Connect, SD-WAN, VPN connection can be other options, but out-of-scope this document.
-Cloud to Cloud connection (you can treat BBA as other Cloud as well to extend the inside Cloud connection)
+Cloud to Cloud connection (you can treat different legal entity as other Cloud as well to extend the inside Cloud connection)
 1.	Direct connect – Regular connection (owned by customer) and hosted connection (Owned by Direct connect provider, customer accept the VIF assigned by provider) + Transit Gateway GW Direct connect attachment
 2.	SD-WAN – SD-WAN application installed on EC2 + Transit Gateway Connect
 3.	IPSec VPN over Internect – VPN application installed on EC2 + Transit Gateway Connect 
@@ -39,7 +39,8 @@ Cloud to Cloud connection (you can treat BBA as other Cloud as well to extend th
 | ---- | ---- | ---- | ----|
 | Direction | Two-way | One-way | Two-way  |
 | Pre-requisites | No-overlapping CIDR block between VPCs | Network load balancer | No-overlapping CIDR block between VPCs. Shared transit gateway through Resource Access Manager.  |
-|  Maximum throughput | No limit, but up to 50 peering per VPC	10 Gbps (40 Gbps burst); up to 50 interface endpoints and GWLB endpoint | 50 Gbps burst per VPC; up to 5 TGW per account and per VPC  |
+|  Maximum throughput | No limit, but up to 50 peering per VPC	10 Gbps (40 Gbps burst); up to 50 interface endpoints and GWLB endpoint | 50 Gbps burst per VPC; up to 5 TGW per account and per VPC  | 5000 Attachments per transit gateway, Maximum bandwidth per VPC, AWS Direct Connect gateway, or peered transit gateway connection 50Gbps
+| Integration | Can not Transitive peering | VPC interface endpoint can over DX/VPN | TGW integrated with VPN via TGW Connect and integrated with DX with TGW DXGateway Attachment
 | Cost | No hourly cost; Same region cross-AZ data transfer costs | Hourly cost; Data transfer cost; Network load balancer cost | Hourly cost per attachment; Data transfer cost  |
 
 
