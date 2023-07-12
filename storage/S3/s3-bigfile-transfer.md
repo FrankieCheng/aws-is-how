@@ -3,7 +3,7 @@
   - [1. onsideration](#consideration)
   - [2. Prepare environment](#prepare-environment)
     - [2.1 Launch EC2](#21-launch-ec2)
-    - [Install Software](#22-install-the-following-softwareplugin-on-ec2)
+    - [2.2 Install Software](#22-install-the-following-softwareplugin-on-ec2)
   - [3. Configuration](#3-congiuration)
     - [3.1 Configure credentials](#31-configure-credentials)
     - [3.2 Download code repository](#32-download-the-code-repository)
