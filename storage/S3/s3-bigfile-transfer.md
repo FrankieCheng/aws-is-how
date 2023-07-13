@@ -66,12 +66,25 @@ aws_access_key_id = REPLACE_WITH_GLOBAL_AK
 aws_secret_access_key = REPLACE_WITH_GLOBAL_SK
 ```
 
+vim ~/.aws/config
+```
+
+```
+[profile china]
+region = cn-northwest-1
+output = json
+
+[profile global]
+region = ap-southeast-1
+output = json
+```
+
 ### 3.2. Download the code repository.
 ```bash
 
 echo "Download application amazon-s3-resumable-upload.git"
 git clone https://github.com/aws-samples/amazon-s3-resumable-upload
-cd cd amazon-s3-resumable-upload/single_node/
+cd amazon-s3-resumable-upload/single_node/
 ```
 
 ### 3.3. Configure transfer job
