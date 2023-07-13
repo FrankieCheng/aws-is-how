@@ -65,7 +65,7 @@ aws_secret_access_key = REPLACE_WITH_CHINA_SK
 aws_access_key_id = REPLACE_WITH_GLOBAL_AK
 aws_secret_access_key = REPLACE_WITH_GLOBAL_SK
 ```
-
+```
 vim ~/.aws/config
 ```
 
